@@ -2,7 +2,7 @@
 
 use Illuminate\Database\Seeder;
 
-class OppertiunitiesTableSeeder extends Seeder
+classOpportunitiesTableSeeder extends Seeder
 {
     /**
      * Run the database seeds.
@@ -11,6 +11,6 @@ class OppertiunitiesTableSeeder extends Seeder
      */
     public function run()
     {
-       $opportunities = factory(Oppertiunity::class, 10)->create();
+       $opportunities = factory(Opportunity::class, 10)->create();
     }
 }

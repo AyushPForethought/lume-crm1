@@ -52,11 +52,11 @@ $router->delete('/contact/{id}', 'CRM\ContactController@destroy');
 //end contact router
 
 //start oppertiunity router
-$router->get('/oppertiunities', 'CRM\OppertunityController@index');
-$router->post('/oppertiunity', 'CRM\OppertunityController@create');
-$router->get('/oppertiunity/{id}', 'CRM\OppertunityController@show');
-$router->put('/oppertiunity/{id}', 'CRM\OppertunityController@update');
-$router->delete('/oppertiunity/{id}', 'CRM\OppertunityController@destroy');
+$router->get('/opportunities', 'CRM\OpportunityController@index');
+$router->post('/opportunity', 'CRM\OpportunityController@create');
+$router->get('/opportunity/{id}', 'CRM\OpportunityController@show');
+$router->put('/opportunity/{id}', 'CRM\OpportunityController@update');
+$router->delete('/opportunity/{id}', 'CRM\OpportunityController@destroy');
 //end oppertiunity router
 
 //start customer router

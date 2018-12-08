@@ -71,7 +71,7 @@ class LeadController extends Controller
      public function update(Request $request, $id)
 
      {     
-        $account= Account::find($id);
+        $lead= Lead::find($id);
         $lead->lead_service_code = $request->input('lead_service_code');
         $lead->lead_name = $request->input('lead_name');
         $lead->lead_designation = $request->input('lead_designation');
