@@ -4,6 +4,7 @@ namespace App\Http\Controllers\CRM;
 use App\Campaign;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use App\Http\Resources\CampaignResources;
 
 class CampaignController extends Controller
 {
@@ -14,11 +15,12 @@ class CampaignController extends Controller
     {
      
        $camapigns = Campaign::all();
-       return response()->json($camapigns);
+       // return response()->json($camapigns);
+        return CampaignResources::collection(Campaign::paginate('2'));
     }
 
 
-     public function create(Request $request)
+     public function store(Request $request)
 
      {
         $campaign = new Campaign;

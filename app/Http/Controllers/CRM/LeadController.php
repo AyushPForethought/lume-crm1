@@ -4,6 +4,7 @@ namespace App\Http\Controllers\CRM;
 use App\Lead;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use App\Http\Resources\LeadResources;
 
 class LeadController extends Controller
 {
@@ -17,12 +18,13 @@ class LeadController extends Controller
     {
      
       $leads = Lead::all();
-      return response()->json($leads);
+      // return response()->json($leads);
+      return LeadResources::collection(Lead::paginate('2'));
 
     }
 
 
-     public function create(Request $request)
+     public function store(Request $request)
 
      { 
         $lead = new Lead;

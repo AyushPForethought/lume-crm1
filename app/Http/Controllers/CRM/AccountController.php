@@ -4,6 +4,7 @@ namespace App\Http\Controllers\CRM;
 use App\Account;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use App\Http\Resources\AccountResorces;
 
 class AccountController extends Controller
 {
@@ -16,11 +17,12 @@ class AccountController extends Controller
 
     { 
       $accounts = Account::all();
-      return response()->json($accounts);
+      // return response()->json($accounts);
+      return AccountResorces::collection(Account::paginate('2'));
     }
 
 
-     public function create(Request $request)
+     public function store(Request $request)
 
      { 
         $account = new Account;

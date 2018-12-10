@@ -4,6 +4,7 @@ namespace App\Http\Controllers\CRM;
 use App\Contact;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use App\Http\Resources\ContactResources;
 
 
 class ContactController extends Controller
@@ -18,12 +19,13 @@ class ContactController extends Controller
     {
      
       $contacts = Contact::all();
-      return response()->json($contacts);
+      // return response()->json($contacts);
+      return ContactResources::collection(Contact::paginate('2'));
 
     }
 
 
-     public function create(Request $request)
+     public function store(Request $request)
 
      {  
         $contact = new Contact;

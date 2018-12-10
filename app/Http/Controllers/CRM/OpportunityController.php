@@ -5,6 +5,7 @@ namespace App\Http\Controllers\CRM;
 use App\Opportunity;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use App\Http\Resources\OpportunityResources;
 
 class OpportunityController extends Controller
 {
@@ -20,12 +21,13 @@ class OpportunityController extends Controller
     {
      
       $opportunities =Opportunity::all();
-      return response()->json($opportunities);
+      // return response()->json($opportunities);
+      return OpportunityResources::collection(Opportunity::paginate('2'));
 
     }
 
 
-     public function create(Request $request)
+     public function store(Request $request)
 
      { 
         $opportunity = new Opportunity;
