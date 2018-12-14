@@ -20,7 +20,7 @@ class ContactController extends Controller
      
       $contacts = Contact::all();
       // return response()->json($contacts);
-      return ContactResources::collection(Contact::paginate('2'));
+      return ContactResources::collection(Contact::paginate('10'));
 
     }
 
@@ -41,6 +41,7 @@ class ContactController extends Controller
         return response()->json($contact);
  
      }
+     
      public function show($id)
 
      {

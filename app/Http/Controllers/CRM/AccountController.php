@@ -18,7 +18,7 @@ class AccountController extends Controller
     { 
       $accounts = Account::all();
       // return response()->json($accounts);
-      return AccountResorces::collection(Account::paginate('2'));
+      return AccountResorces::collection(Account::paginate('10'));
     }
 
 

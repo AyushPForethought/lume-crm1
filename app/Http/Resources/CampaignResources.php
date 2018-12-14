@@ -16,7 +16,7 @@ class CampaignResources extends JsonResource
     {
         
         return [
-
+            'campaign_id' => $this->campaign_id,
             'campaign_name' => $this->campaign_name,
             'campaign_type' => $this->campaign_type,
             'campaign_startDate' => $this->campaign_startDate,

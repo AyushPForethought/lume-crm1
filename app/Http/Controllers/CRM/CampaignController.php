@@ -16,7 +16,7 @@ class CampaignController extends Controller
      
        $camapigns = Campaign::all();
        // return response()->json($camapigns);
-        return CampaignResources::collection(Campaign::paginate('2'));
+        return CampaignResources::collection(Campaign::paginate('10'));
     }
 
 

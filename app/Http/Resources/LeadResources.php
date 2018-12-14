@@ -16,7 +16,7 @@ class LeadResources extends JsonResource
     {
         
         return [
-
+            'lead_id' => $this->lead_id,
             'lead_service_code' => $this->lead_service_code,
             'lead_name' => $this->lead_name,
             'lead_designation' => $this->lead_designation,
