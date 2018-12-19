@@ -15,19 +15,19 @@ class CreateOpportunitiesTable extends Migration
     {
         Schema::create('opportunities', function (Blueprint $table) {
             $table->increments('opportunity_id');
-            $table->string('opportunity_deal_owner');
-            $table->string('opportunity_deal_name');
-            $table->string('opportunity_account_name');
-            $table->string('opportunity_type');
-            $table->string('opportunity_lead_id');
-            $table->string('opportunity_campaign_id');
-            $table->string('opportunity_contact_id');
-            $table->string('opportunity_amount');
-            $table->string('opportunity_closing_date');
-            $table->string('opportunity_stage');
-            $table->string('opportunity_probability');
-            $table->string('opportunity_expected_revenue');
-            $table->string('opportunity_description');
+            $table->string('opportunity_deal_owner')->nullable($value = true);
+            $table->string('opportunity_deal_name')->nullable($value = true);
+            $table->string('opportunity_account_name')->nullable($value = true);
+            $table->string('opportunity_type')->nullable($value = true);
+            $table->string('opportunity_lead_id')->nullable($value = true);
+            $table->string('opportunity_campaign_id')->nullable($value = true);
+            $table->string('opportunity_contact_id')->nullable($value = true);
+            $table->string('opportunity_amount')->nullable($value = true);
+            $table->string('opportunity_closing_date')->nullable($value = true);
+            $table->string('opportunity_stage')->nullable($value = true);
+            $table->string('opportunity_probability')->nullable($value = true);
+            $table->string('opportunity_expected_revenue')->nullable($value = true);
+            $table->string('opportunity_description')->nullable($value = true);
             $table->timestamps();
         });
     }

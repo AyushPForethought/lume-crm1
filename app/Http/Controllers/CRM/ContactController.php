@@ -28,15 +28,19 @@ class ContactController extends Controller
      public function store(Request $request)
 
      {  
+
+        // $contact = Contact::create($request->all());
+        // return response()->json($contact, 201);
+
         $contact = new Contact;
-        $contact->contact_type = $request->contact_type;
-        $contact->contact_name = $request->contact_name;
-        $contact->contact_email = $request->contact_email;
-        $contact->contact_mobileNo = $request->contact_mobileNo;
-        $contact->contact_landlineNo = $request->contact_landlineNo;
-        $contact->contact_companyID = $request->contact_companyID;
-        $contact->contact_companyName = $request->contact_companyName;
-        $contact->contact_designation = $request->contact_designation;
+        $contact->contact_type=$request['contact_type'];
+        $contact->contact_name=$request['contact_name'];
+        $contact->contact_email=$request['contact_email'];
+        $contact->contact_mobileNo=$request['contact_mobileNo'];
+        $contact->contact_landlineNo=$request['contact_landlineNo'];
+        $contact->contact_companyID=$request['contact_companyID'];
+        $contact->contact_companyName=$request['contact_companyName'];
+        $contact->contact_designation=$request['contact_designation'];
         $contact->save();
         return response()->json($contact);
  

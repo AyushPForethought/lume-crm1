@@ -1,4 +1,4 @@
-<?php
+->nullable($value = true)<?php
 
 use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
@@ -14,19 +14,19 @@ class CreateCampaignsTable extends Migration
     public function up()
     {
         Schema::create('campaigns', function (Blueprint $table) {
-            $table->increments('campaign_id');
-            $table->string('campaign_name');
-            $table->string('campaign_type');
-            $table->string('campaign_description');
-            $table->string('campaign_startDate');
-            $table->string('campaign_endDate');
-            $table->string('campaign_budgetCost');
-            $table->string('utm_website_url');
-            $table->string('utm_campaign_source');
-            $table->string('utm_Campaign_Medium');
-            $table->string('utm_campaign_name');
-            $table->string('utm_campaign_term');
-            $table->string('utm_campaign_content');
+            $table->increments('campaign_id')->nullable($value = true);
+            $table->string('campaign_name')->nullable($value = true);
+            $table->string('campaign_type')->nullable($value = true);
+            $table->string('campaign_description')->nullable($value = true);
+            $table->string('campaign_startDate')->nullable($value = true);
+            $table->string('campaign_endDate')->nullable($value = true);
+            $table->string('campaign_budgetCost')->nullable($value = true);
+            $table->string('utm_website_url')->nullable($value = true);
+            $table->string('utm_campaign_source')->nullable($value = true);
+            $table->string('utm_Campaign_Medium')->nullable($value = true);
+            $table->string('utm_campaign_name')->nullable($value = true);
+            $table->string('utm_campaign_term')->nullable($value = true);
+            $table->string('utm_campaign_content')->nullable($value = true);
             $table->timestamps();
         });
     }

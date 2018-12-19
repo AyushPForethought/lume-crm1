@@ -23,7 +23,7 @@ class AccountResorces extends JsonResource
             'account_email' => $this->account_email,
             'account_mobileNo' => $this->account_mobileNo,
             'account_landlineNo' => $this->account_landlineNo,
-            'account_landlineNo' => $this->account_landlineNo,
+            'account_address' => $this->account_address,
             'account_city' => $this->account_city,
             'account_state' => $this->account_state,
             'account_country' => $this->account_country,

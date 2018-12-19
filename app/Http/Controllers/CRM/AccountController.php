@@ -1,6 +1,7 @@
 <?php
 
 namespace App\Http\Controllers\CRM;
+
 use App\Account;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
@@ -25,23 +26,33 @@ class AccountController extends Controller
      public function store(Request $request)
 
      { 
+
+
+        // $account = Account::create($request->all());
+ 
+        // return response()->json($account, 201);
+ 
+
+        
         $account = new Account;
-        $account->account_name = $request->account_name;
-        $account->account_email = $request->account_email;
-        $account->account_mobileNo = $request->account_mobileNo;
-        $account->account_landlineNo = $request->account_landlineNo;
-        $account->account_address = $request->account_address;
-        $account->account_website = $request->account_website;
-        $account->account_city = $request->account_city;
-        $account->account_state = $request->account_state;
-        $account->account_country = $request->account_country;
-        $account->account_pincode = $request->account_pincode;
-        $account->account_panNo = $request->account_panNo;
-        $account->account_GSTNo = $request->account_GSTNo;
+        $account->account_name=$request['account_name'];
+        $account->account_email=$request['account_email'];
+        $account->account_mobileNo=$request['account_mobileNo'];
+        $account->account_landlineNo=$request['account_landlineNo'];
+        $account->account_address=$request['account_address'];
+        $account->account_website=$request['account_website'];
+        $account->account_city=$request['account_city'];
+        $account->account_state=$request['account_state'];
+        $account->account_country=$request['account_country'];
+        $account->account_pincode=$request['account_pincode'];
+        $account->account_panNo=$request['account_panNo'];
+        $account->account_GSTNo=$request['account_GSTNo'];
         $account->save();
-        return response()->json($account);
+        return response()->json($account, 201);
 
      }
+
+
 
      public function show($id)
 
@@ -60,7 +71,7 @@ class AccountController extends Controller
         $account->account_mobileNo = $request->input('account_mobileNo');
         $account->account_landlineNo = $request->input('account_landlineNo');
         $account->account_address = $request->input('account_address');
-        $account->account_website = $request->input('account_website ');
+        $account->account_website = $request->input('account_website');
         $account->account_city = $request->input('account_city');
         $account->account_state = $request->input('account_state');
         $account->account_country = $request->input('account_country');
@@ -68,7 +79,7 @@ class AccountController extends Controller
         $account->account_panNo = $request->input('account_panNo');
         $account->account_GSTNo = $request->input('account_GSTNo');
         $account->save();
-        return response()->json($account);
+        return response()->json($account, 201);
 
         
      }

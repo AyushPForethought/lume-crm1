@@ -1,6 +1,7 @@
 <?php
 
 namespace App\Http\Controllers\CRM;
+
 use App\Campaign;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
@@ -23,20 +24,27 @@ class CampaignController extends Controller
      public function store(Request $request)
 
      {
+
+        
+        // $campaign = Campaign::create($request->all());
+ 
+        // return response()->json($campaign, 201);
+ 
+
         $campaign = new Campaign;
-        $campaign->campaign_name = $request->campaign_name;
-        $campaign->campaign_type = $request->campaign_type;
-        $campaign->campaign_description = $request->campaign_description;
-        $campaign->campaign_startDate = $request->campaign_startDate;
-        $campaign->campaign_endDate = $request->campaign_endDate;
-        $campaign->campaign_description = $request->campaign_description;
-        $campaign->campaign_budgetCost = $request->campaign_budgetCost;
-        $campaign->utm_website_url = $request->utm_website_url;
-        $campaign->utm_campaign_source = $request->utm_campaign_source;
-        $campaign->utm_Campaign_Medium = $request->utm_Campaign_Medium ;
-        $campaign->utm_campaign_name = $request->utm_campaign_name;
-        $campaign->utm_campaign_term = $request->utm_campaign_term;
-        $campaign->utm_campaign_content = $request->utm_campaign_content;
+        $campaign->campaign_name=$request['campaign_name'];
+        $campaign->campaign_type=$request['campaign_type'];
+        $campaign->campaign_description=$request['campaign_description'];
+        $campaign->campaign_startDate=$request['campaign_startDate'];
+        $campaign->campaign_endDate=$request['campaign_endDate'];
+        $campaign->campaign_description=$request['campaign_description'];
+        $campaign->campaign_budgetCost=$request['campaign_budgetCost'];
+        $campaign->utm_website_url=$request['utm_website_url'];
+        $campaign->utm_campaign_source=$request['utm_campaign_source'];
+        $campaign->utm_Campaign_Medium=$request['utm_Campaign_Medium'] ;
+        $campaign->utm_campaign_name=$request['utm_campaign_name'];
+        $campaign->utm_campaign_term=$request['utm_campaign_term'];
+        $campaign->utm_campaign_content=$request['utm_campaign_content'];
         $campaign->save();
         return response()->json($campaign);
 
