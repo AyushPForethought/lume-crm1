@@ -17,7 +17,7 @@ class CreateLeadsTable extends Migration
             $table->increments('lead_id');
             $table->string('lead_service_code')->nullable($value = true);
             $table->string('lead_name')->nullable($value = true);
-            $table->string('lead_designation'->nullable($value = true);
+            $table->string('lead_designation')->nullable($value = true);
             $table->string('lead_companyName')->nullable($value = true);
             $table->string('lead_email')->nullable($value = true);
             $table->string('lead_mobileNo')->nullable($value = true);
