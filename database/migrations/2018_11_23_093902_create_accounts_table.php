@@ -28,7 +28,7 @@ class CreateAccountsTable extends Migration
             $table->string('account_pincode')->nullable($value = true); 
             $table->string('account_panNo')->nullable($value = true); 
             $table->string('account_GSTNo')->nullable($value = true);
-
+// New fields
             $table->string('account_platform_refid')->nullable($value = true);
             $table->string('account_primary_industry')->nullable($value = true); 
             $table->string('account_revenue')->nullable($value = true); 
@@ -36,7 +36,6 @@ class CreateAccountsTable extends Migration
             $table->string('account_ownership')->nullable($value = true); 
             $table->string('account_businessmodel')->nullable($value = true); 
             $table->string('account_address2')->nullable($value = true); 
-            $table->string('account_country')->nullable($value = true); 
             $table->string('account_county')->nullable($value = true); 
             $table->string('account_tech_searched')->nullable($value = true); 
             $table->string('account_tech_matched')->nullable($value = true);
@@ -54,14 +53,13 @@ class CreateAccountsTable extends Migration
             $table->string('account_erp')->nullable($value = true);
             $table->string('account_finance')->nullable($value = true); 
             $table->string('account_itinfra')->nullable($value = true); 
-            $table->string('account_account_hr')->nullable($value = true);
-            $table->string('account_account_itsm')->nullable($value = true); 
+            $table->string('account_hr')->nullable($value = true);
+            $table->string('account_itsm')->nullable($value = true); 
             $table->string('account_languages')->nullable($value = true); 
-            $table->string('account_account_medical')->nullable($value = true); 
-            $table->string('account_account_mobility')->nullable($value = true); 
+            $table->string('account_medical')->nullable($value = true); 
+            $table->string('account_mobility')->nullable($value = true); 
             $table->string('account_networking')->nullable($value = true); 
             $table->string('account_programmingtools')->nullable($value = true); 
-            $table->string('account_tech_matched')->nullable($value = true);
             $table->string('account_security')->nullable($value = true);
             $table->string('account_servers')->nullable($value = true); 
             $table->string('account_serviceproviders')->nullable($value = true); 

@@ -27,9 +27,9 @@ class CreateLeadsTable extends Migration
             $table->string('lead_state')->nullable($value = true);
             $table->string('lead_country')->nullable($value = true);
             $table->string('lead_pincode')->nullable($value = true);
-            $table->string('lead_companyID')->nullable($value = true);
-            $table->string('lead_accountID')->nullable($value = true);
-            $table->string('lead_contactID')->nullable($value = true);
+            // $table->string('lead_companyID')->nullable($value = true);
+            // $table->string('lead_accountID')->nullable($value = true);
+            // $table->string('lead_contactID')->nullable($value = true);
             $table->string('lead_utm_website_url')->nullable($value = true);
             $table->string('lead_utm_campaign_source')->nullable($value = true);
             $table->string('lead_utm_campaign_medium')->nullable($value = true);

@@ -22,7 +22,7 @@ class OpportunityController extends Controller
      
       $opportunities =Opportunity::all();
       // return response()->json($opportunities);
-      return OpportunityResources::collection(Opportunity::paginate('10'));
+      return OpportunityResources::collection(Opportunity::paginate('100'));
 
     }
 
