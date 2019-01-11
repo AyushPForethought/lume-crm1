@@ -20,7 +20,7 @@ class LeadController extends Controller
      
       $leads = Lead::all();
       // return response()->json($leads);
-      return LeadResources::collection(Lead::paginate('10'));
+      return LeadResources::collection(Lead::paginate('100'));
 
     }
 
