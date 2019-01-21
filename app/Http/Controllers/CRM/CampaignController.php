@@ -29,7 +29,7 @@ class CampaignController extends Controller
         // $campaign = Campaign::create($request->all());
  
         // return response()->json($campaign, 201);
- 
+        
 
         $campaign = new Campaign;
         $campaign->campaign_name=$request['campaign_name'];
@@ -45,6 +45,7 @@ class CampaignController extends Controller
         $campaign->utm_campaign_name=$request['utm_campaign_name'];
         $campaign->utm_campaign_term=$request['utm_campaign_term'];
         $campaign->utm_campaign_content=$request['utm_campaign_content'];
+        $campaign->utm_campaign_url=$request['utm_campaign_url'];
         $campaign->save();
         return response()->json($campaign);
 
@@ -72,10 +73,11 @@ class CampaignController extends Controller
         $campaign->campaign_budgetCost = $request->input('campaign_budgetCost');
         $campaign->utm_website_url  = $request->input('utm_website_url');
         $campaign->utm_campaign_source = $request->input('utm_campaign_source');
-        $campaign->utm_Campaign_Medium = $request->input('utm_Campaign_Medium ');
+        $campaign->utm_Campaign_Medium = $request->input('utm_Campaign_Medium');
         $campaign->utm_campaign_name= $request->input('utm_campaign_name');
         $campaign->utm_campaign_term = $request->input('utm_campaign_term');
-        $campaign->utm_campaign_content   = $request->input('utm_campaign_content ');
+        $campaign->utm_campaign_content   = $request->input('utm_campaign_content');
+        $campaign->utm_campaign_url   = $request->input('utm_campaign_url');
         $campaign->save();
         return response()->json($campaign);
     

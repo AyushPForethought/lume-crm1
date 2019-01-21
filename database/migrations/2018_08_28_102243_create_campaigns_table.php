@@ -27,6 +27,7 @@ class CreateCampaignsTable extends Migration
             $table->string('utm_campaign_name')->nullable($value = true);
             $table->string('utm_campaign_term')->nullable($value = true);
             $table->string('utm_campaign_content')->nullable($value = true);
+            $table->string('utm_campaign_url')->nullable($value = true);
             $table->timestamps();
         });
     }
