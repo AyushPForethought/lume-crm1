@@ -3,6 +3,9 @@
 namespace App\Http\Resources;
 
 use Illuminate\Http\Resources\Json\JsonResource;
+// use App\Http\Resources\AccountResources;
+use App\Http\Resources\AccountResorces;
+
 
 class ContactResources extends JsonResource
 {
@@ -24,7 +27,10 @@ class ContactResources extends JsonResource
             'contact_landlineNo' => $this->contact_landlineNo,
             'contact_companyID' => $this->contact_companyID,
             'contact_companyName' => $this->contact_companyName,
-            'contact_designation' => $this->contact_designation
+            'contact_designation' => $this->contact_designation,
+            'contact_account_id' => $this->contact_account_id,
+            // 'account_id' => AccountResorces::collection($this->account),
+            // 'account' => new AccountResorces($this->account),
         ];
 
     }
