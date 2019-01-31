@@ -15,13 +15,17 @@ class LeadController extends Controller
      * @return void
      */
     public function index()
-
     {
-     
       $leads = Lead::all();
       // return response()->json($leads);
       return LeadResources::collection(Lead::paginate('100'));
+    }
 
+    public function indexLeadContactAccount($contactid,$accountid)
+    {
+      $whereData = array(array('lead_account_id',$accountid), array('lead_contact_id',$contactid));
+      $leads = Lead::where($whereData)->get();
+      return response()->json($leads);
     }
 
 
@@ -62,6 +66,8 @@ class LeadController extends Controller
         $lead->lead_total=$request['lead_total'];
         $lead->lead_Currency=$request['lead_Currency'];
         $lead->lead_Location=$request['lead_Location'];
+        $lead->lead_contact_id=$request['lead_contact_id'];
+        $lead->lead_account_id=$request['lead_account_id'];
         $lead->save();
         return response()->json($lead);
 

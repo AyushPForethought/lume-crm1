@@ -15,7 +15,7 @@ class CreateAccountsTable extends Migration
     {
 
         Schema::create('accounts', function (Blueprint $table) {
-            $table->increments('id');
+            $table->increments('account_id');
             $table->string('account_name')->nullable($value = true);
             $table->string('account_website')->nullable($value = true);
             $table->string('account_email')->nullable($value = true); 

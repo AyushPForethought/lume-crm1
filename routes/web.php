@@ -25,6 +25,9 @@ $router->post('/account', 'CRM\AccountController@store');
 $router->get('/account/{id}', 'CRM\AccountController@show');
 $router->put('/account/{id}', 'CRM\AccountController@update');
 $router->delete('/account/{id}', 'CRM\AccountController@destroy');
+$router->get('/account/contact/{accountid}', 'CRM\AccountController@indexAccountContact');
+
+
 //end account router
 
 //start lead router
@@ -33,6 +36,11 @@ $router->post('/lead', 'CRM\LeadController@store');
 $router->get('/lead/{id}', 'CRM\LeadController@show');
 $router->put('/lead/{id}', 'CRM\LeadController@update');
 $router->delete('/lead/{id}', 'CRM\LeadController@destroy');
+$router->get('/lead/{contactid}/{accountid}', 'CRM\LeadController@indexLeadContactAccount');
+// $router->get('/lead/{contactid}/{accountid}',  function(){return 'sfsf';});
+// $router->get('/account/contact/{accountid}', function(){return 'sfsf';});
+// $router->get('/lead/{contactid}/{accountid}', function(){return 'sfsf';});
+
 //end lead router
 
 //start cmapaign router
@@ -49,6 +57,9 @@ $router->post('/contact', 'CRM\ContactController@store');
 $router->get('/contact/{id}', 'CRM\ContactController@show');
 $router->put('/contact/{id}', 'CRM\ContactController@update');
 $router->delete('/contact/{id}', 'CRM\ContactController@destroy');
+// $router->get('/account/contact/{accountid}', 'CRM\ContactController@indexContactAccount');
+// $router->get('/account/contact/{accountid}', function(){return 'sfsf';});
+$router->get('a', function(){return 'sfsf';});
 //end contact router
 
 //start oppertiunity router

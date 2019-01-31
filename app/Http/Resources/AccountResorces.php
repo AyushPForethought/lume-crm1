@@ -17,7 +17,7 @@ class AccountResorces extends JsonResource
         
         return [
 
-            'account_id' => $this->id,
+            'account_id' => $this->account_id,
             'account_name' => $this->account_name,
             'account_website' => $this->account_website,
             'account_email' => $this->account_email,

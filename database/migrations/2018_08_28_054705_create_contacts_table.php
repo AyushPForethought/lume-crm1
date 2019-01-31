@@ -23,6 +23,7 @@ class CreateContactsTable extends Migration
             $table->string('contact_companyID')->nullable($value = true);
             $table->string('contact_companyName')->nullable($value = true);
             $table->string('contact_designation')->nullable($value = true);
+            $table->integer('contact_account_id')->nullable();
             $table->timestamps();
         });
     }

@@ -15,11 +15,18 @@ class AccountController extends Controller
      * @return void
      */
     public function index()
-
     { 
       $accounts = Account::all();
       // return response()->json($accounts);
       return AccountResorces::collection(Account::paginate('100'));
+    }
+
+    public function indexAccountContact($accountid)
+    {
+      $accountContact=Account::find($accountid); 
+      return $accountContact->contact()->get();
+      $data['contact']=$accountContact->contact()->get();
+      return $data;
     }
 
 
@@ -94,9 +101,10 @@ class AccountController extends Controller
 
 
      public function show($id)
-
      {
-        $account = Account::find($id);
+      //   return 'hi';
+      $account_id=$id;
+        $account = Account::find($account_id);
         return response()->json($account);
      }
 
