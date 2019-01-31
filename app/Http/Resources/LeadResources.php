@@ -42,7 +42,10 @@ class LeadResources extends JsonResource
             'lead_Source_Inormation' =>$this->lead_Source_Inormation,
             'lead_Created_By_Code'  =>$this->lead_Created_By_Code,
             'lead_Amount_Currrency' =>$this->lead_Amount_Currrency,
-            'lead_Location' =>$this->lead_Location
+            'lead_Location' =>$this->lead_Location,
+            'lead_account_id' =>$this->lead_account_id,
+            'lead_contact_id' =>$this->lead_contact_id,
+            'lead_company_id' =>$this->lead_company_id,
         ];
 
     }
